@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopNest - Discover deals on electronics, fashion, home essentials and more.">
+  <title>ShopNest | Online Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="top-strip">
+    <div class="container strip-inner">
+      <span>Big Shopping Days are here! <strong>Up to 70% OFF</strong></span>
+      <div><a href="#deals">Today's Deals</a><a href="#footer">Customer Care</a></div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container header-main">
+      <button class="icon-btn mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+      <a class="brand" href="#" aria-label="ShopNest home">Shop<span>Nest</span><small>Happy shopping, every day</small></a>
+
+      <div class="delivery">
+        <span class="pin">⌖</span>
+        <div><small>Deliver to</small><button id="locationButton">Ahmedabad 380001 ▾</button></div>
+      </div>
+
+      <div class="search-wrap">
+        <select id="searchCategory" aria-label="Search category">
+          <option value="all">All</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Home">Home</option>
+          <option value="Beauty">Beauty</option>
+          <option value="Books">Books</option>
+        </select>
+        <input id="searchInput" type="search" placeholder="Search for products, brands and more..." autocomplete="off">
+        <button id="searchButton" aria-label="Search">⌕</button>
+        <div class="search-suggestions" id="searchSuggestions"></div>
+      </div>
+
+      <div class="header-actions">
+        <button class="header-action" id="accountButton"><span>♙</span><small>Account</small></button>
+        <button class="header-action" id="wishlistButton"><span>♡</span><small>Wishlist</small><b id="wishlistCount">0</b></button>
+        <button class="header-action cart-action" id="cartButton"><span>🛒</span><small>Cart</small><b id="cartCount">0</b></button>
+      </div>
+    </div>
+
+    <nav class="category-nav" id="categoryNav">
+      <div class="container nav-inner">
+        <button class="nav-category active" data-category="all">All</button>
+        <button class="nav-category" data-category="Electronics">Electronics</button>
+        <button class="nav-category" data-category="Fashion">Fashion</button>
+        <button class="nav-category" data-category="Home">Home & Kitchen</button>
+        <button class="nav-category" data-category="Beauty">Beauty</button>
+        <button class="nav-category" data-category="Books">Books</button>
+        <button class="nav-category" data-category="Appliances">Appliances</button>
+        <a href="#deals">Today's Deals</a>
+        <a href="#best-sellers">Best Sellers</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <span class="eyebrow">THE SHOPNEST FESTIVAL</span>
+        <h1>Big deals.<br><span>Beautiful finds.</span></h1>
+        <p>Everything you love, all in one place. Discover handpicked deals across your favourite categories.</p>
+        <a href="#products" class="primary-btn">Shop now <span>→</span></a>
+        <div class="hero-trust"><span>✓ Easy returns</span><span>✓ Secure shopping</span><span>✓ Great prices</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-circle"></div>
+        <div class="hero-card hero-card-one"><span>HOT DEAL</span><strong>Up to 70%</strong><small>OFF</small></div>
+        <div class="hero-card hero-card-two"><span>✦</span><strong>Shop your<br>happy place</strong></div>
+        <div class="hero-bag">🛍️</div>
+        <div class="hero-spark spark-one">✦</div><div class="hero-spark spark-two">✧</div>
+      </div>
+    </section>
+
+    <section class="container benefits">
+      <div><span>🚚</span><p><strong>Free delivery</strong><small>On eligible orders</small></p></div>
+      <div><span>↩️</span><p><strong>Easy returns</strong><small>Simple return process</small></p></div>
+      <div><span>🔒</span><p><strong>Secure payments</strong><small>Shop with confidence</small></p></div>
+      <div><span>🎧</span><p><strong>Help & support</strong><small>We're here to help</small></p></div>
+    </section>
+
+    <section class="container category-section">
+      <div class="section-heading"><div><span class="eyebrow">EXPLORE MORE</span><h2>Shop by category</h2></div><a href="#products">View all →</a></div>
+      <div class="category-cards">
+        <button class="category-card" data-category="Electronics"><span class="category-emoji">🎧</span><strong>Electronics</strong><small>Gadgets & more</small></button>
+        <button class="category-card" data-category="Fashion"><span class="category-emoji">👗</span><strong>Fashion</strong><small>Style your day</small></button>
+        <button class="category-card" data-category="Home"><span class="category-emoji">🛋️</span><strong>Home & Kitchen</strong><small>Make it cosy</small></button>
+        <button class="category-card" data-category="Beauty"><span class="category-emoji">💄</span><strong>Beauty</strong><small>Your daily care</small></button>
+        <button class="category-card" data-category="Appliances"><span class="category-emoji">📺</span><strong>Appliances</strong><small>Smart living</small></button>
+        <button class="category-card" data-category="Books"><span class="category-emoji">📚</span><strong>Books</strong><small>Read something new</small></button>
+      </div>
+    </section>
+
+    <section class="deal-banner container" id="deals">
+      <div><span class="eyebrow">LIMITED-TIME OFFERS</span><h2>Deals you don't want to miss</h2><p>Find your favourites before they're gone.</p></div>
+      <div class="countdown"><span>Sale ends in</span><div><b id="hours">08</b><i>:</i><b id="minutes">45</b><i>:</i><b id="seconds">30</b></div><small>Hours&nbsp;&nbsp; Minutes&nbsp;&nbsp; Seconds</small></div>
+      <a href="#products" class="light-btn">Explore deals →</a>
+    </section>
+
+    <section class="container product-section" id="best-sellers">
+      <div class="section-heading"><div><span class="eyebrow">CUSTOMER FAVOURITES</span><h2>Best sellers</h2></div><a href="#products" id="bestSellerLink">Shop best sellers →</a></div>
+      <div class="product-grid compact-grid" id="bestSellerGrid"></div>
+    </section>
+
+    <section class="container product-section" id="products">
+      <div class="section-heading product-heading"><div><span class="eyebrow">FIND YOUR NEXT FAVOURITE</span><h2>Explore products</h2><p id="resultCount">Showing all products</p></div></div>
+
+      <div class="shop-layout">
+        <aside class="filters">
+          <div class="filter-title"><h3>Filters</h3><button id="clearFilters">Clear all</button></div>
+          <div class="filter-group"><h4>Category</h4><label><input type="radio" name="filterCategory" value="all" checked> All products</label><label><input type="radio" name="filterCategory" value="Electronics"> Electronics</label><label><input type="radio" name="filterCategory" value="Fashion"> Fashion</label><label><input type="radio" name="filterCategory" value="Home"> Home & Kitchen</label><label><input type="radio" name="filterCategory" value="Beauty"> Beauty</label><label><input type="radio" name="filterCategory" value="Books"> Books</label><label><input type="radio" name="filterCategory" value="Appliances"> Appliances</label></div>
+          <div class="filter-group"><h4>Price range</h4><input type="range" id="priceRange" min="500" max="100000" step="500" value="100000"><div class="range-label"><span>₹500</span><strong id="priceValue">₹1,00,000</strong></div></div>
+          <div class="filter-group"><h4>Customer rating</h4><label><input type="checkbox" id="ratingFilter"> 4★ & above</label></div>
+          <div class="filter-group"><h4>Availability</h4><label><input type="checkbox" id="stockFilter"> In stock only</label></div>
+          <div class="filter-group"><h4>Discount</h4><label><input type="checkbox" id="discountFilter"> 20% off or more</label></div>
+        </aside>
+
+        <div class="products-area">
+          <div class="toolbar"><span id="toolbarLabel">Recommended for you</span><label>Sort by <select id="sortSelect"><option value="featured">Featured</option><option value="popular">Popularity</option><option value="price-low">Price: Low to High</option><option value="price-high">Price: High to Low</option><option value="rating">Customer Rating</option><option value="discount">Discount</option></select></label></div>
+          <div class="product-grid" id="productGrid"></div>
+          <div class="empty-state hidden" id="emptyState"><span>🛍️</span><h3>No products found</h3><p>Try changing your search or filters.</p><button class="primary-btn" id="resetSearch">Show all products</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter container">
+      <div><span class="eyebrow">A LITTLE SOMETHING FOR YOU</span><h2>Deals in your inbox.</h2><p>Subscribe for updates, new arrivals and special offers.</p></div>
+      <form id="newsletterForm"><input type="email" id="newsletterEmail" placeholder="Enter your email address" required><button type="submit">Subscribe →</button></form>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="container footer-grid">
+      <div class="footer-about"><a class="brand footer-brand" href="#">Shop<span>Nest</span></a><p>Your happy place for everyday shopping. Discover great products and deals across categories.</p></div>
+      <div><h4>About ShopNest</h4><a href="#footer">About us</a><a href="#footer">Careers</a><a href="#footer">Press</a><a href="#footer">Contact us</a></div>
+      <div><h4>Help</h4><a href="#footer">Payments</a><a href="#footer">Shipping</a><a href="#footer">Returns</a><a href="#footer">FAQs</a></div>
+      <div><h4>Policy</h4><a href="#footer">Privacy policy</a><a href="#footer">Terms of use</a><a href="#footer">Security</a><a href="#footer">Sitemap</a></div>
+      <div><h4>Stay connected</h4><p>Follow us for new launches and offers.</p><div class="socials"><a href="#footer">Instagram</a><a href="#footer">Facebook</a></div></div>
+    </div>
+    <div class="footer-bottom"><div class="container"><span>© 2026 ShopNest. All rights reserved.</span><span>Made for happy shopping ♡</span></div></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="side-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-header"><h2>Your cart <span id="drawerCartCount">(0)</span></h2><button class="close-btn" data-close>×</button></div>
+    <div class="drawer-content" id="cartItems"></div>
+    <div class="drawer-footer" id="cartFooter"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div><small>Delivery charges calculated at checkout.</small><button class="primary-btn full-btn" id="checkoutButton">Proceed to checkout</button></div>
+  </aside>
+
+  <aside class="side-drawer" id="wishlistDrawer" aria-label="Wishlist">
+    <div class="drawer-header"><h2>Your wishlist</h2><button class="close-btn" data-close>×</button></div>
+    <div class="drawer-content" id="wishlistItems"></div>
+  </aside>
+
+  <div class="modal" id="productModal">
+    <button class="close-btn modal-close" data-close>×</button>
+    <div id="productModalContent"></div>
+  </div>
+
+  <div class="modal small-modal" id="accountModal">
+    <button class="close-btn modal-close" data-close>×</button>
+    <span class="eyebrow">WELCOME TO SHOPNEST</span><h2>Your account</h2><p>Sign in to view orders, manage your wishlist and enjoy a smoother shopping experience.</p>
+    <form id="accountForm"><label>Your name<input type="text" id="accountName" placeholder="Enter your name" required></label><label>Email address<input type="email" id="accountEmail" placeholder="Enter your email" required></label><button class="primary-btn full-btn" type="submit">Continue</button></form>
+    <small class="demo-note">Demo account only. No real account is created.</small>
+  </div>
+
+  <div class="modal small-modal" id="locationModal">
+    <button class="close-btn modal-close" data-close>×</button>
+    <span class="eyebrow">DELIVERY LOCATION</span><h2>Where should we deliver?</h2><p>Enter your 6-digit PIN code to update your delivery location.</p>
+    <form id="locationForm"><label>PIN code<input type="text" id="pincodeInput" maxlength="6" inputmode="numeric" placeholder="e.g. 380001" pattern="[0-9]{6}" required></label><button class="primary-btn full-btn" type="submit">Apply location</button></form>
+  </div>
+
+  <div class="modal small-modal" id="checkoutModal">
+    <button class="close-btn modal-close" data-close>×</button>
+    <span class="eyebrow">SECURE CHECKOUT DEMO</span><h2>Complete your order</h2>
+    <div id="checkoutSummary"></div>
+    <form id="checkoutForm"><label>Full name<input id="checkoutName" required placeholder="Your full name"></label><label>Delivery address<textarea id="checkoutAddress" rows="3" required placeholder="House no., street, area, city"></textarea></label><label>PIN code<input id="checkoutPin" required maxlength="6" pattern="[0-9]{6}" placeholder="6-digit PIN code"></label><label>Payment method<select id="paymentMethod"><option>Cash on Delivery</option><option>UPI (demo)</option><option>Card (demo)</option></select></label><button class="primary-btn full-btn" type="submit">Place demo order</button></form>
+    <small class="demo-note">This is a frontend demo. No real payment will be taken.</small>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  
+</body>
+</html>
